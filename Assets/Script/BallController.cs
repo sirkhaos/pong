@@ -44,5 +44,6 @@ public class BallController : MonoBehaviour
             ballRigidbody.velocity *= 1.1f;
         }
         //}
+        GetComponent<AudioSource>().Play();
     }
 }

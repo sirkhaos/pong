@@ -24,12 +24,13 @@ public class DeadZone : MonoBehaviour
                     sc.ChangeSceneTo("WinScene");
                 }
                 else if (tag.Equals("Left"))
-                    {
-                        sc.ChangeSceneTo("GameOverScene");
+                {
+                    sc.ChangeSceneTo("GameOverScene");
                 }
             }
             collision.GetComponent<BallController>().ballStop = true;
             collision.transform.position = Vector3.zero;
+            GetComponent<AudioSource>().Play();
         }
     }
 }
